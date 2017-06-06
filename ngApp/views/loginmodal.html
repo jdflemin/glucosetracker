@@ -1,0 +1,36 @@
+<div class="modal-header">
+  <h2>Please enter your info to login.</h2> <br>
+  <h4>Otherwise go back and either learn more by clicking "About this app!" or "Sign Up"</h4>
+</div>
+<div class="modal-body">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+        Username:
+      </div>
+      <div class="col-md">
+        <input type="text" placeholder="username" ng-model="controller.username">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1">
+        Password:
+      </div>
+      <div class="col-md">
+        <input type="password" placeholder="password" ng-model="controller.password">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md">
+        <button type="button" class="btn btn-basic" ng-click="controller.loginHere()">Login</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+<div class="modal-footer">
+  <button type="button" ng-click="controller.ok()" class="btn btn-danger">Close</button>
+</div>

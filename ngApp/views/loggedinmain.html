@@ -1,0 +1,56 @@
+
+<br>
+<div class="container">
+  <div class="row">
+      <p>Hello {{controller.userInfo.username}}, how are your sugars today?</p>
+  </div>
+  <div class="row">
+
+    <div class="col-md-2">
+      <ul>Click on a name to view their page!
+        <li ng-repeat="username in controller.username"><a href="/loggedinviewingothers">{{username.username}}</a></li>
+      </ul>
+   </div>
+    <div class="col-md-10">
+      <div class="well">
+
+        <form class="well">
+          <input type="text" placeholder="mm/dd/yyyy" ng-model="controller.newGlucose.date">
+          <input type="text" placeholder="00:00am/pm" ng-model="controller.newGlucose.time">
+          <input type="text" placeholder="123" ng-model="controller.newGlucose.sugar">
+          <button type="button" class="btn btn-success" ng-click="controller.addGlucose()">Add</button>
+        </form>
+
+
+
+        <table class="table table-striped">
+          <tr>
+            <th>Day</th>
+            <th>Time of day</th>
+            <th>Sugar</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+
+
+          <tr ng-repeat="bloodsugar in controller.userInfo.bloodsugars">
+            <td>{{bloodsugar.date}}</td>
+            <td>{{bloodsugar.time}}</td>
+            <td>{{bloodsugar.sugar}}</td>
+            <td><button type="button" class="btn btn-info" ng-click="controller.editGlucose(bloodsugar)">Edit</button></td>
+            <td><button type="button" class="btn btn-danger" ng-click="controller.deleteSugar(bloodsugar)">X</button></td>
+          </tr>
+
+
+        </table>
+      </div>
+    </div>
+
+
+  </div>
+
+<button type="button" class="btn btn-danger" ng-click="controller.logout()">Sign Out</button>
+</div>
+<br>
+<hr>
+<a href="/doctorloggedin">Are you the doctor?</a>

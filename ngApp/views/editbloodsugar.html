@@ -1,0 +1,13 @@
+<div class="modal-header">
+  <h2>Edit Glucose Data</h2>
+</div>
+<div class="modal-body">
+  Date: <input type="text" ng-model="modal.userInfo.date"><br>
+  Time: <input type="text" ng-model="modal.userInfo.time"><br>
+  Sugar: <input type="text" ng-model="modal.userInfo.sugar"><br>
+  <button type="button" class="btn btn-info" ng-click="modal.save()">Save</button>
+
+</div>
+<div class="modal-footer">
+  <button type="button" ng-click="modal.ok()" class="btn btn-danger">Close</button>
+</div>

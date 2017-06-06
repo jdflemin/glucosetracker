@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myglucosetracker">
+
+<head>
+  <title>myglucosetracker</title>
+  <meta charset="utf-8">
+  <base href="/" />
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/ngApp/css/site.css"/>
+</head>
+
+<body>
+  <div class="container">
+        <h1 id="headertocarry" class="navbar-fixed-top"><br>My Glucose Tracker</h1>
+
+
+        <ui-view></ui-view>
+  </div>
+
+  <script src="/bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="/bower_components/angular-touch/angular-touch.min.js"></script>
+  <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+  <script src="/ngApp/app.js"></script>
+  <script src="/ngApp/controllers/homecontroller.js"></script>
+  <script src="/ngApp/controllers/modalcontroller.js"></script>
+  <script src="/ngApp/controllers/mypagecontroller.js"></script>
+  <script src="/ngApp/controllers/friendspagecontroller.js"></script>
+  <script src="/ngApp/controllers/editcontroller.js"></script>
+  <script src="/ngApp/services/services.js"></script>
+
+</body>
+
+</html>

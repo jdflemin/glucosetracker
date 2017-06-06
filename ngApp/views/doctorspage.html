@@ -1,0 +1,58 @@
+
+<br>
+<div class="container">
+  <div class="row">
+      <p>Hello Dr. {{controller.userInfo.username}}, how are your patients dosages today? Do you need to update any of them?</p>
+  </div>
+  <div class="row">
+
+    <div class="col-md-2">
+      <ul>Click on a name to view their page!
+        <li ng-repeat="username in controller.username"><a href="/loggedinviewingothers">{{username.username}}</a></li>
+      </ul>
+   </div>
+    <div class="col-md-10">
+      <div class="well">
+
+        <form class="well">
+          <input type="text" placeholder="mm/dd/yyyy" ng-model="controller.newGlucose.date">
+          <input type="text" placeholder="00:00am/pm" ng-model="controller.newGlucose.time">
+          <input type="text" placeholder="123" ng-model="controller.newGlucose.sugar">
+          <button type="button" class="btn btn-success" ng-click="controller.addGlucose()">Add</button>
+        </form>
+
+
+
+        <table class="table table-striped">
+          <tr>
+            <th>Patient</th>
+            <th>Bolus</th>
+            <th>Basal</th>
+            <th>Correct</th>
+            <th>Update</th>
+            <th>Delete Patient</th>
+          </tr>
+
+
+          <tr ng-repeat="username in controller.username">
+            <td>{{username.username}}</td>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+            <td><button type="button" class="btn btn-info">Edit</button></td>
+            <td><button type="button" class="btn btn-danger">X</button></td>
+          </tr>
+
+
+        </table>
+      </div>
+    </div>
+
+
+  </div>
+
+<button type="button" class="btn btn-danger" ng-click="controller.logout()">Sign Out</button>
+</div>
+<br>
+<hr>
+<a href="/loggedinmain">Return</a>

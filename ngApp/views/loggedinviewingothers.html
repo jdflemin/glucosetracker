@@ -1,0 +1,48 @@
+<br>
+<div class="container">
+  <div class="row">
+      <p>You are viewing "SO and SO's page" click <a href="/loggedinmain">HERE</a> to go back to your page</p>
+  </div>
+  <div class="row">
+
+    <div class="col-md-2">
+      <ul>Click on a name to view their page!
+        <li ng-repeat="username in controller.username"><a href="/loggedinviewingothers">{{username.username}}</a></li>
+      </ul>
+   </div>
+    <div class="col-md-10">
+      <div class="well">
+        <table class="table table-striped">
+          <tr>
+            <th>Day</th>
+            <th>Time of day</th>
+            <th>Sugar</th>
+          </tr>
+
+
+          <tr>
+            <td>mm/dd/yyy1</td>
+            <td>12:12am</td>
+            <td>123</td>
+          </tr>
+          <tr>
+            <td>mm/dd/yyy2</td>
+            <td>1:12am</td>
+            <td>173</td>
+          </tr>
+          <tr>
+            <td>mm/dd/yyy3</td>
+            <td>3:12am</td>
+            <td>156</td>
+          </tr>
+
+
+        </table>
+      </div>
+    </div>
+
+
+  </div>
+
+<button type="button" class="btn btn-danger" ng-click="controller.logout()">Sign Out</button>
+</div>
